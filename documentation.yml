@@ -1,0 +1,43 @@
+module: icinga2_director
+short_description: Manage objects in icingaweb2 director
+description: Create, update, replace or delete host objects in icinga2 director
+author: Thilo Wening (@mkayontour)
+requirements: requests
+options:
+  name:
+    description: Name of the host object
+    required: true
+    type: string
+  state:
+    description: Choose between present or absent, whether the host should be created or deleted
+    required: true
+    type: string
+  host:
+    description: The address and URI to the icingaweb2 UI.
+    required: true
+    type: string
+  username:
+    description: Username which is allowed to logon and use the director.
+    required: true
+    type: string
+  password:
+    description: Password for the user to login.
+    required: true
+    no_log: True
+    type: string
+  update_if_exists:
+    description: Update the host in director if the host already exists
+    required: false
+    type: boolean
+  host_vars:
+    description: A hash containing all vars which are provided at a host object.
+    required: false
+    type: string
+  custom_vars:
+    description: A hash containing all custom vars provided to the host object.
+    required: false
+    type: string
+  templates:
+    description: A list containing all templates which should be imported
+    required: false
+    type: string
