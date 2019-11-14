@@ -57,7 +57,14 @@ And then use it as every plugin in your playbooks or roles.
       os: "Linux"
     templates:
       - "basic-host"
+  notify: "deploy config"
 
+handlers:
+  - name: deploy config
+    icinga2_director_deploy:
+      host: http://icingaweb2.local/icingaweb2
+      username: 'icinga'
+      password: secret
 ```
 
 #### Activate VENV
