@@ -1,0 +1,7 @@
+{
+  "ANSIBLE_MODULE_ARGS": {
+    "host": "http://192.168.10.111/icingaweb2",
+    "username": "icinga",
+    "password": "icinga"
+  }
+}

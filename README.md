@@ -2,17 +2,18 @@
 
 ## Description
 
-This module can create, update, or delete hosts at the director. 
+This module can create, update, or delete hosts at the director.
 
 This is the first, go for this Ansible Module. For the parameter documentation check the ansible-doc
 
 `ansible-doc icinga2_director_host`
+`ansible-doc icinga2_director_deploy`
 
 ## Todos
 
 Create as much objects at possible within these modules or this module.
 
-We should be able to create anything ad-hoc with ansible on the director. 
+We should be able to create anything ad-hoc with ansible on the director.
 
 
 ## Installation
@@ -21,7 +22,7 @@ First two things to mention:
 
 I will try to officially push this to Ansible, but this needs much more testing than a smoketest.
 
-I could try to put everything into a collection, then it could be easier to install for ansible. (maybe?) 
+I could try to put everything into a collection, then it could be easier to install for ansible. (maybe?)
 
 Otherwise
 
@@ -57,4 +58,15 @@ And then use it as every plugin in your playbooks or roles.
     templates:
       - "basic-host"
 
+```
+
+#### Activate VENV
+
+
+```
+$ python3 -m venv venv
+$ . venv/bin/activate
+$ pip install -r requirements.txt
+
+$ . hacking/env-setup
 ```
