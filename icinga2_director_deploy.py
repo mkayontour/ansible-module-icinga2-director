@@ -100,8 +100,6 @@ def main():
     global module
     module = AnsibleModule(
         argument_spec=dict(
-            state=dict(required=False, default='present'),
-            name=dict(required=False),
             host=dict(required=True),
             username=dict(required=True),
             password=dict(required=True, no_log=True)
