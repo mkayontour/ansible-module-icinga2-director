@@ -130,7 +130,6 @@ class Icinga2Director(object):
                                                        "successfully updated"),
                                return_code=u.status_code)
                 else:
-                    #res = u.text
                     module.fail_json(msg='Failed to create/update host' + u.text)
             else:
                 res = dict(changed=False,
@@ -172,7 +171,7 @@ class Icinga2Director(object):
         elif action == 'update':
             payload = Icinga2Director().struct_data()
             try:
-                r = requests.post(url + '/host?name=' + self.name,
+                r = requests.put(url + '/host?name=' + self.name,
                                   auth=(self.username, self.password),
                                   headers=self.headers,
                                   data=json.dumps(payload))
