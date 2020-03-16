@@ -37,7 +37,7 @@ export ANSIBLE_LIBRARY=$ANSIBLE_LIBRARY:/path/to/local/repository
 Afterwards you should be getting the documentation for the module!
 
 ```
-ansible-doc icigna2_director_host
+ansible-doc icinga2_director_host
 ```
 
 And then use it as every plugin in your playbooks or roles.
